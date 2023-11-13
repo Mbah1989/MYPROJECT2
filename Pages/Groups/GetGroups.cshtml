@@ -1,0 +1,43 @@
+﻿@page
+@model MYPROJECT2.Pages.Groups.GetGroupsModel
+@{
+}
+
+<p>
+    <a asp-page="/Groups/AddGroup"> New Group</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th> GroupId </th>
+            <th>Name </th>
+            <th>LeaderId </th>
+           
+        </tr>
+    </thead>
+    <tbody>
+
+        @if (Model.Groups != null)
+        {
+            @foreach (var item in Model.Groups)
+            {
+                <tr>
+
+                    <td> @item.GroupId </td>
+
+                    <td> @item.Name </td>
+                    <td> @item.LeaderId</td>
+                    
+
+                    <td>
+                        <p>
+                            <a asp-page="/ChildFolder/DeleteGroup" asp-route-sid="@item.GroupId">Delete </a>
+
+                            <a asp-page="/ChildFolder/UpdateGroups" asp-route-sid="@item.GroupId">Update </a>
+                        </p>
+                    </td>
+
+                </tr>
+            }
+        }
+</table>

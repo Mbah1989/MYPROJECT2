@@ -1,0 +1,47 @@
+﻿@page
+@model MYPROJECT2.Pages.ChildFolder.AddChildrenModel
+@{
+}
+<h1>Add Child</h1>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="  ModelOnly  " class="text-danger">
+            </div>
+
+            <div class="form-group">
+                <label asp-for="@Model.Børn.Name" class="control-label"></label>
+                <input asp-for="@Model.Børn.Name" class="form-control" />
+                <span asp-validation-for="@Model.Børn.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Børn.Address" class="control-label"></label>
+                <input asp-for="@Model.Børn.Address" class="form-control" />
+                <span asp-validation-for="@Model.Børn.Address" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="@Model.Børn.Age" class="control-label"></label>
+                <input asp-for="@Model.Børn.Age" class="form-control" />
+                <span asp-validation-for="@Model.Børn.Age" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="@Model.Børn.GroupId" class="control-label"></label>
+                <input asp-for="@Model.Børn.GroupId" class="form-control" />
+                <span asp-validation-for="@Model.Børn.GroupId" class="text-danger"></span>
+            </div>
+             <div class="form-group">
+                <label asp-for="@Model.Børn.Start" class="control-label"></label>
+                <input asp-for="@Model.Børn.Start" class="form-control" />
+                <span asp-validation-for="@Model.Børn.Start" class="text-danger"></span>
+            </div>
+            
+
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>

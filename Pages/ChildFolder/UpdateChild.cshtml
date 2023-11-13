@@ -1,0 +1,41 @@
+﻿@page
+@model MYPROJECT2.Pages.ChildFolder.UpdateChildModel
+@{
+}
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Child.ChildId"></label>
+        <input asp-for="Child.ChildId" class="form-control" />
+        <span asp-validation-for="Child.ChildId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Child.Name"></label>
+        <input asp-for="Child.Name" class="form-control" />
+        <span asp-validation-for="Child.Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Child.Address"></label>
+        <input asp-for="Child.Address" class="form-control" />
+        <span asp-validation-for="Child.Address" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Child.Age"></label>
+        <input asp-for="Child.Age" class="form-control" />
+        <span asp-validation-for="Child.Age" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Child.GroupId"></label>
+        <input asp-for="Child.GroupId" class="form-control" />
+        <span asp-validation-for="Child.GroupId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Child.Start" class="control-label"></label>
+        <input asp-for="@Model.Child.Start" class="form-control" />
+        <span asp-validation-for="@Model.Child.Start" class="text-danger"></span>
+    </div>
+
+
+
+    <input type="submit" value="Update Child" class="btn btn-primary" />
+</form>
+

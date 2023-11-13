@@ -1,0 +1,45 @@
+﻿@page
+@model MYPROJECT2.Pages.Bestyrelse.TilføjMedlemModel
+@{
+}
+<h1>Tilføj Medlem</h1>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="  ModelOnly  " class="text-danger">
+            </div>
+
+
+            <div class="form-group">
+                <label asp-for="@Model.leader.LeaderId" class="control-label"></label>
+                <input asp-for="@Model.leader.LeaderId" class="form-control" />
+                <span asp-validation-for="@Model.leader.LeaderId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="@Model.leader.Name" class="control-label"></label>
+                <input asp-for="@Model.leader.Name" class="form-control" />
+                <span asp-validation-for="@Model.leader.Name" class="text-danger"></span>
+            </div>
+             <div class="form-group">
+                <label asp-for="@Model.leader.UserId" class="control-label"></label>
+                <input asp-for="@Model.leader.UserId" class="form-control" />
+                <span asp-validation-for="@Model.leader.UserId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.leader.Appointed" class="control-label"></label>
+                <input asp-for="@Model.leader.Appointed" class="form-control" />
+                <span asp-validation-for="@Model.leader.Appointed" class="text-danger"></span>
+            </div>
+
+
+
+
+
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+﻿@page
+@model MYPROJECT2.Pages.Bestyrelse.VisMedlemmerModel
+@{
+}
+<p>
+    <a asp-page="/Bestyrelse/TilføjMedlem"> Nyt Medlem</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th> LeaderId </th>
+            <th>Navn </th>
+            <th>BrugerId </th>
+            <th>Ansat </th>
+
+        </tr>
+    </thead>
+    <tbody>
+
+        @if (Model.Leaders != null)
+        {
+            @foreach (var item in Model.Leaders)
+            {
+                <tr>
+
+                    <td> @item.LeaderId </td>
+
+                    <td> @item.Name </td>
+                    <td> @item.UserId </td>
+                    <td> @item.Appointed</td>
+
+
+                    <td>
+                        <p>
+                            <a asp-page="/Bestyrelse/SletMedlem" asp-route-sid="@item.LeaderId">Delete </a>
+
+                            <a asp-page="/Bestyrelse/UpdateMedlem" asp-route-sid="@item.LeaderId">Update </a>
+                        </p>
+                    </td>
+
+                </tr>
+            }
+        }
+</table>
+
