@@ -1,0 +1,32 @@
+﻿@page
+@model MYPROJECT2.Pages.Bestyrelse.OpdatereMedlemModel
+@{
+}
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Leader.LeaderId"></label>
+        <input asp-for="Leader.LeaderId" class="form-control" />
+        <span asp-validation-for="Leader.LeaderId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Leader.Name"></label>
+        <input asp-for="Leader.Name" class="form-control" />
+        <span asp-validation-for="Leader.Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Leader.UserId"></label>
+        <input asp-for="Leader.UserId" class="form-control" />
+        <span asp-validation-for="Leader.UserId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Leader.Appointed"></label>
+        <input asp-for="Leader.Appointed" class="form-control" />
+        <span asp-validation-for="Leader.Appointed" class="text-danger"></span>
+    </div>
+    
+
+
+
+    <input type="submit" value="Opdater Medlem" class="btn btn-primary" />
+</form>

@@ -36,9 +36,18 @@ namespace MYPROJECT2.Services
             context.SaveChanges();
         }
 
-        public void UpgradeLeader(Leader leader)
+        public void UpgradeLeader(Leader Opdaterleader)
         {
-            throw new NotImplementedException();
+            Leader ExistingLeader=context.Leaders.FirstOrDefault(e=>e.LeaderId==Opdaterleader.LeaderId);
+
+            if (ExistingLeader!=null)
+            {
+                ExistingLeader.Name = Opdaterleader.Name;
+                ExistingLeader.UserId = Opdaterleader.UserId;
+                ExistingLeader.Appointed = Opdaterleader.Appointed;
+            }
+
+            context.SaveChanges();
         }
     }
 }
